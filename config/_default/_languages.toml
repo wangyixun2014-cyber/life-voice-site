@@ -1,6 +1,6 @@
 # Rename this file to languages.toml to enable multilingual support
 [en]
-    label     = "English"
+    label     = "简体中文"
     direction = "ltr"
-    title     = "Example Site"
+    title     = "老王资料站"
     weight    = 1
