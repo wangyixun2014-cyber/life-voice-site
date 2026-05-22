@@ -1,18 +1,46 @@
-# Change baseurl before deploy
 baseurl = "https://starter.stack.cai.im/"
-locale  = "en-us"
-title   = "资源共享站"
-
-# Theme i18n support
-# See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
+locale = "zh-cn"
+title = "资源共享站"
 defaultContentLanguage = "zh-cn"
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage = true
 
-# Change it to your Disqus shortname before using
-disqusShortname = "hugo-theme-stack"
+[languages]
+    [languages.zh-cn]
+        languageName = "简体中文"
+        title = "资源共享站"
+        weight = 1
+
+        [[languages.zh-cn.menu.main]]
+            identifier = "home"
+            name       = "首页"
+            url        = "/"
+            weight     = 1
+            [languages.zh-cn.menu.main.params]
+                icon = "home"
+
+        [[languages.zh-cn.menu.main]]
+            identifier = "archives"
+            name       = "资源归档"
+            url        = "/archives/"
+            weight     = 2
+            [languages.zh-cn.menu.main.params]
+                icon = "archive"
+
+        [[languages.zh-cn.menu.main]]
+            identifier = "search"
+            name       = "搜索资源"
+            url        = "/search/"
+            weight     = 3
+            [languages.zh-cn.menu.main.params]
+                icon = "search"
+
+        [[languages.zh-cn.menu.main]]
+            identifier = "links"
+            name       = "友情链接"
+            url        = "/links/"
+            weight     = 4
+            [languages.zh-cn.menu.main.params]
+                icon = "link"
 
 [pagination]
     pagerSize = 5
