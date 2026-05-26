@@ -1,7 +1,7 @@
 # Change baseurl before deploy
 baseurl = "https://wyxwym.com/"
 locale  = "en-us"
-title   = "老王资源站"
+title   = "神爱世人"
 
 # Theme i18n support
 # See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
