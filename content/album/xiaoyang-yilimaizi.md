@@ -8,40 +8,40 @@ tags:
     - "小羊诗歌"
     - "一粒麥子"
 image: "https://images.unsplash.com/photo-1544427928-c49cddee6eac?w=800"
-comments: false # 👈 这一行直接消灭掉最底下的 Disqus 报错框，保持清爽！
+comments: false # 彻底消灭最底下的 Disqus 报错框
 ---
 
-亲爱的弟兄姊妹，这里是小羊诗歌《一粒麦子》整张专辑。点击下方歌单即可在线点播收听：
+亲爱的弟兄姊妹，本页面已开启**手机悬浮播放模式**。你可以一边自由滑动网页浏览，一边收听小羊诗歌《一粒麦子》整张专辑：
 
 <style>
 .aplayer {
-    font-size: 16px !important; /* 整体字体从12px放大到16px */
+    font-size: 16px !important; 
 }
 .aplayer .aplayer-info .aplayer-music .aplayer-title {
-    font-size: 19px !important; /* 正在播放的歌名加大到19px */
+    font-size: 19px !important; 
     font-weight: bold !important;
 }
 .aplayer .aplayer-list ol li {
-    font-size: 16px !important;  /* 歌单列表文字放大 */
-    height: 42px !important;     /* 增大行高，免得字大了挤在一起 */
+    font-size: 16px !important;  
+    height: 42px !important;     
     line-height: 42px !important;
 }
-.aplayer .aplayer-list ol li .aplayer-list-title {
-    font-size: 16px !important;
-}
-.aplayer .aplayer-info .aplayer-controller .aplayer-time {
-    font-size: 14px !important; /* 播放时间数字放大 */
+/* 确保悬浮窗在手机端永远飘在最上层 */
+.aplayer.aplayer-fixed {
+    z-index: 99999 !important;
 }
 </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
-<div id="aplayer-yilimaizi" style="margin: 20px 0;"></div>
+<div id="aplayer-yilimaizi"></div>
 
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer-yilimaizi'),
+    fixed: true,       /* 🌟 核心魔法：直接开启全网页固定悬浮模式！ */
+    mini: false,       /* 保持完整歌单功能 */
     audio: [
         {
             name: '一粒麥子',
