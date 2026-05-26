@@ -10,8 +10,8 @@ favicon        = "img/favicon.png"
 SortBy              = "default"
 
 [footer]
-    since      = 2020
-    customText = "专注于全网各大网盘拉新与独家信息差资源分享"
+    since      = 2026
+    customText = "「神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不致滅亡，反得永生。」——《約翰福音》3:16"
 
 [dateFormat]
     published   = ":date_full"
