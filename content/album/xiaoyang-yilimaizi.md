@@ -11,13 +11,13 @@ image: "https://images.unsplash.com/photo-1544427928-c49cddee6eac?w=800"
 comments: false # 彻底消灭最底下的 Disqus 报错框
 ---
 
-亲爱的弟兄姊妹，这里是小羊诗歌《一粒麦子》整张专辑。电脑端直接在正文收听，手机端会自动开启精美的底部悬浮模式：
+亲爱的弟兄姊妹，这里是小羊诗歌《一粒麦子》整张专辑。你可以直接在下方浏览完整曲目并点播收听：
 
 <style>
-/* 1. 全局文字与间距放大 */
 .aplayer {
     font-size: 16px !important; 
-    margin: 20px 0 !important;
+    margin: 25px 0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
 .aplayer .aplayer-info .aplayer-music .aplayer-title {
     font-size: 19px !important; 
@@ -25,30 +25,12 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
 }
 .aplayer .aplayer-list ol li {
     font-size: 16px !important;  
-    height: 42px !important;     
-    line-height: 42px !important;
+    height: 44px !important;     
+    line-height: 44px !important;
 }
-
-/* 2. 手机端专属改造（宽度小于767px） */
-@media (max-width: 767px) {
-    #aplayer-yilimaizi {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        margin: 0 !important;
-        z-index: 99999 !important; /* 确保盖在最上层 */
-        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15) !important;
-        background: #fff !important;
-    }
-    
-    /* 🌟 核心防穿透锁：死死锁住手机歌单的滑动事件，禁止它传递给背景 */
-    .aplayer .aplayer-list {
-        max-height: 200px !important;       /* 限制列表高度，防止撑满全屏 */
-        overflow-y: auto !important;         /* 允许内部上下滚动 */
-        touch-action: pan-y !important;      /* 强制手机只处理内部垂直拖拽 */
-        -webkit-overflow-scrolling: touch !important; /* 彻底激活苹果/安卓的顺滑滚动 */
-    }
+/* 🌟 核心：强制解除歌单高度限制，让 11 首歌全部直接显示，不再缩在小滚轮里 */
+.aplayer .aplayer-list {
+    max-height: none !important; 
 }
 </style>
 
@@ -60,9 +42,9 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer-yilimaizi'),
-    fixed: false,      
+    fixed: false,      /* 彻底关闭全站悬浮 */
     mini: false,       
-    listFolded: true,  /* 🌟 核心命令：强制让列表在手机/电脑上默认“折叠收起”，只有点击才会弹出来 */
+    listFolded: false, /* 🌟 核心命令：强制让列表默认“直接展开”，不用人去点 */
     audio: [
         {
             name: '一粒麥子',
