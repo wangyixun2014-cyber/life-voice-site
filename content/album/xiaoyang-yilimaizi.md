@@ -28,9 +28,11 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
     height: 44px !important;     
     line-height: 44px !important;
 }
-/* 🌟 核心：强制解除歌单高度限制，让 11 首歌全部直接显示，不再缩在小滚轮里 */
+
+/* 🌟 终极核心：同时强制锁定 height 和 max-height，彻底粉碎播放器的滚动条限制 */
 .aplayer .aplayer-list {
-    max-height: none !important; 
+    height: auto !important;      /* 👈 加上这一行，强制高度自动撑开 */
+    max-height: none !important;  /* 👈 确保不被最大高度锁死 */
 }
 </style>
 
@@ -42,9 +44,9 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer-yilimaizi'),
-    fixed: false,      /* 彻底关闭全站悬浮 */
+    fixed: false,      
     mini: false,       
-    listFolded: false, /* 🌟 核心命令：强制让列表默认“直接展开”，不用人去点 */
+    listFolded: false, /* 强制让列表默认直接展开 */
     audio: [
         {
             name: '一粒麥子',
