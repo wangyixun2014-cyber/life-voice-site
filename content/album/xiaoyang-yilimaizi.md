@@ -11,11 +11,13 @@ image: "https://images.unsplash.com/photo-1544427928-c49cddee6eac?w=800"
 comments: false # 彻底消灭最底下的 Disqus 报错框
 ---
 
-亲爱的弟兄姊妹，本页面已开启**手机悬浮播放模式**。你可以一边自由滑动网页浏览，一边收听小羊诗歌《一粒麦子》整张专辑：
+亲爱的弟兄姊妹，这里是小羊诗歌《一粒麦子》整张专辑。电脑端直接在正文收听，手机端会自动开启精美的底部悬浮模式：
 
 <style>
+/* 1. 基础文字与间距放大 */
 .aplayer {
     font-size: 16px !important; 
+    margin: 20px 0 !important;
 }
 .aplayer .aplayer-info .aplayer-music .aplayer-title {
     font-size: 19px !important; 
@@ -26,9 +28,22 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
     height: 42px !important;     
     line-height: 42px !important;
 }
-/* 确保悬浮窗在手机端永远飘在最上层 */
-.aplayer.aplayer-fixed {
-    z-index: 99999 !important;
+
+/* 2. 核心：当检测到是手机屏幕（宽度小于767px）时，自动变身底栏浮窗 */
+@media (max-width: 767px) {
+    #aplayer-yilimaizi {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        z-index: 99999 !important; /* 确保飘在所有网页元素的最上层 */
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15) !important;
+    }
+    /* 限制手机端歌单弹出来的高度，留出空间看网页 */
+    .aplayer .aplayer-list {
+        max-height: 220px !important; 
+    }
 }
 </style>
 
@@ -40,8 +55,8 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer-yilimaizi'),
-    fixed: true,       /* 🌟 核心魔法：直接开启全网页固定悬浮模式！ */
-    mini: false,       /* 保持完整歌单功能 */
+    fixed: false,      /* 🌟 恢复正常页面内嵌入，不再缩进左下角 */
+    mini: false,       
     audio: [
         {
             name: '一粒麥子',
