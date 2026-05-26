@@ -29,10 +29,11 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
     line-height: 44px !important;
 }
 
-/* 🌟 终极核心：同时强制锁定 height 和 max-height，彻底粉碎播放器的滚动条限制 */
-.aplayer .aplayer-list {
-    height: auto !important;      /* 👈 加上这一行，强制高度自动撑开 */
-    max-height: none !important;  /* 👈 确保不被最大高度锁死 */
+/* 🌟 终极核心：把外层容器(.aplayer-list)和内层真正的歌曲列表(ol)的高度统通通解放！ */
+.aplayer .aplayer-list,
+.aplayer .aplayer-list ol {
+    height: auto !important;      /* 强制高度由歌曲数量自动撑开 */
+    max-height: none !important;  /* 彻底斩断 250px 的最大高度诅咒 */
 }
 </style>
 
@@ -46,7 +47,7 @@ const ap = new APlayer({
     container: document.getElementById('aplayer-yilimaizi'),
     fixed: false,      
     mini: false,       
-    listFolded: false, /* 强制让列表默认直接展开 */
+    listFolded: false, /* 别客气，让列表一进来就大方展开 */
     audio: [
         {
             name: '一粒麥子',
