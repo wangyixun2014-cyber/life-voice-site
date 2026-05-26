@@ -2,7 +2,7 @@
 title: "今日推荐：我必使你痊愈"
 description: "这是一篇赞美诗歌的测试音频文章"
 date: 2026-05-26
-image: ""
+image: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800" # 顺手配一张安静的风景大图
 categories:
     - 赞美诗歌
 ---
