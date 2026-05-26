@@ -14,7 +14,7 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
 亲爱的弟兄姊妹，这里是小羊诗歌《一粒麦子》整张专辑。电脑端直接在正文收听，手机端会自动开启精美的底部悬浮模式：
 
 <style>
-/* 1. 基础文字与间距放大 */
+/* 1. 全局文字与间距放大 */
 .aplayer {
     font-size: 16px !important; 
     margin: 20px 0 !important;
@@ -29,7 +29,7 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
     line-height: 42px !important;
 }
 
-/* 2. 核心：当检测到是手机屏幕（宽度小于767px）时，自动变身底栏浮窗 */
+/* 2. 手机端专属改造（宽度小于767px） */
 @media (max-width: 767px) {
     #aplayer-yilimaizi {
         position: fixed !important;
@@ -37,12 +37,17 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
         left: 0 !important;
         width: 100% !important;
         margin: 0 !important;
-        z-index: 99999 !important; /* 确保飘在所有网页元素的最上层 */
+        z-index: 99999 !important; /* 确保盖在最上层 */
         box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.15) !important;
+        background: #fff !important;
     }
-    /* 限制手机端歌单弹出来的高度，留出空间看网页 */
+    
+    /* 🌟 核心防穿透锁：死死锁住手机歌单的滑动事件，禁止它传递给背景 */
     .aplayer .aplayer-list {
-        max-height: 220px !important; 
+        max-height: 200px !important;       /* 限制列表高度，防止撑满全屏 */
+        overflow-y: auto !important;         /* 允许内部上下滚动 */
+        touch-action: pan-y !important;      /* 强制手机只处理内部垂直拖拽 */
+        -webkit-overflow-scrolling: touch !important; /* 彻底激活苹果/安卓的顺滑滚动 */
     }
 }
 </style>
@@ -55,8 +60,9 @@ comments: false # 彻底消灭最底下的 Disqus 报错框
 <script>
 const ap = new APlayer({
     container: document.getElementById('aplayer-yilimaizi'),
-    fixed: false,      /* 🌟 恢复正常页面内嵌入，不再缩进左下角 */
+    fixed: false,      
     mini: false,       
+    listFolded: true,  /* 🌟 核心命令：强制让列表在手机/电脑上默认“折叠收起”，只有点击才会弹出来 */
     audio: [
         {
             name: '一粒麥子',
