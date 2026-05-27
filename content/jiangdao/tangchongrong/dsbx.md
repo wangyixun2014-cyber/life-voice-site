@@ -6,6 +6,11 @@ comments: false
 
 ### 📖 欢迎聆听《登山宝训》系列解经讲道：
 
+<!-- Wi-Fi 流量温馨提醒 (静态文本) -->
+<div style="background-color: #f8f9fa; border-left: 4px solid #5c7cfa; padding: 12px 16px; margin: 15px 0; border-radius: 4px; color: #555; font-size: 15px; line-height: 1.6;">
+    📡 <strong>温馨提示：</strong> 本系列包含 38 集全长高清录音。为避免消耗过多手机数据，建议您在连接 <strong>Wi-Fi（无线网络）</strong> 的环境下进行聆听。
+</div>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
@@ -13,7 +18,7 @@ comments: false
 <div id="aplayer-dengshan"></div>
 
 <style>
-/* === 咱们精心打磨的终极完美排版 CSS === */
+/* === 精心打磨的完美排版 CSS === */
 .aplayer { font-size: 16px !important; margin: 20px 0 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important; }
 .aplayer .aplayer-list ol li { font-size: 16px !important; height: 44px !important; line-height: 44px !important; border-bottom: 1px solid #eee; }
 .aplayer .aplayer-list, .aplayer .aplayer-list ol { height: auto !important; max-height: none !important; }
@@ -31,9 +36,11 @@ comments: false
 const base_url = 'https://audio.wyxwym.com/jiangdao/tangchongrong/dengshanbaoxun/';
 const default_cover = 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'; 
 
+// === 播放器初始化与 38 集完整列表 ===
 const ap_dengshan = new APlayer({
     container: document.getElementById('aplayer-dengshan'),
     listFolded: false,
+    preload: 'none',   // 👈 核心省流设置：绝对不后台偷跑流量
     audio: [
         { name: '登山宝训 01', artist: '唐崇荣牧师', url: base_url + '登山宝训01_1.mp3', cover: default_cover },
         { name: '登山宝训 02', artist: '唐崇荣牧师', url: base_url + '登山宝训02_1.mp3', cover: default_cover },
@@ -74,5 +81,26 @@ const ap_dengshan = new APlayer({
         { name: '登山宝训 37', artist: '唐崇荣牧师', url: base_url + '登山宝训37_1.mp3', cover: default_cover },
         { name: '登山宝训 38', artist: '唐崇荣牧师', url: base_url + '登山宝训38_1.mp3', cover: default_cover }
     ]
+});
+
+// === 网络流量智能侦测与弹窗拦截 ===
+let hasWarned = false; // 记录是否已经提醒过
+
+ap_dengshan.on('play', function () {
+    // 获取当前设备的网络状态
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    
+    // 发现是 cellular（手机移动流量）且没提醒过
+    if (connection && connection.type === 'cellular' && !hasWarned) {
+        ap_dengshan.pause(); // 瞬间暂停，阻止流量消耗
+        
+        // 弹出系统级询问框
+        const userAgree = confirm("📡 系统检测到您可能正在使用【手机移动数据】。\n\n本系列音频较长（共38集），继续播放可能会消耗较多流量。\n\n是否确认继续播放？（建议在 Wi-Fi 环境下收听）");
+        
+        if (userAgree) {
+            hasWarned = true; // 用户确认后放行
+            ap_dengshan.play();
+        }
+    }
 });
 </script>
