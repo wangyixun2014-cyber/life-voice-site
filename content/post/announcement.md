@@ -3,7 +3,7 @@ title: "欢迎来到神爱世人资源站 🌟"
 description: "这里是专注于分享历年主日精选讲道录音与属灵信息听道的纯净空间。🌿"
 date: 2026-05-26
 featured: true
-image: "https://images.unsplash.com/photo-1507434965515-61970f2bd7c6?w=1200" # 这是一张免费的圣经/星空背景大图
+image: "img/eden.jpg"
 ---
 
 ### 📋 网站使用指南
