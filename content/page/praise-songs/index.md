@@ -1,5 +1,5 @@
 ---
-title: "赞美诗歌🎵"
+title: "赞美诗歌"
 slug: "praise-songs"
 description: "在这里可以按音乐团队与具体专辑快速查找你想听的诗歌"
 layout: "page"
