@@ -2,7 +2,7 @@
 title: "今日推荐：我必使你痊愈"
 description: "这是一篇赞美诗歌的测试音频文章"
 date: 2026-05-26
-image: "img/temple.jpg"
+image: "https://audio.wyxwym.com/img/temple.jpg"  # 👈 直接贴带 https 的完整网址
 categories:
     - 赞美诗歌
 ---
