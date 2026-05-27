@@ -1,3 +1,8 @@
 /*
     You can add your own custom styles here.
 */
+
+/* 全站彻底隐藏日期、日历和时钟图标 */
+.article-meta, .article-time, .article-date, .post-meta {
+    display: none !important;
+}
