@@ -1,6 +1,6 @@
 ---
-title: "欢迎来到神爱世人资源站 🌟"
-description: "这里是专注于分享历年主日精选讲道录音与属灵信息听道的纯净空间。🌿"
+title: "诸天述说神的荣耀 🌌"
+description: "穹苍传扬他的手段。这日到那日发出言语；这夜到那夜传出知识。 ——《诗篇》19:1-2"
 date: 2026-05-26
 featured: true
 image: "/img/eden.jpeg"  # 👈 核心：把 jpg 改成准确的 jpeg
