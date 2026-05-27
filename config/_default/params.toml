@@ -35,7 +35,7 @@ SortBy              = "default"
     homepage = [
        
     ]
-    page = [{ type = "toc" }]
+    page = []
 
 [opengraph.twitter]
     site = ""
