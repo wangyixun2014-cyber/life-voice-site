@@ -3,8 +3,8 @@ title: "见证分享"
 slug: "jianzheng"
 menu:
     main:
-        weight: 4                   # 👈 权重写 4，刚好完美排在讲道录音（3）的屁股后面
-        url: "/categories/见证分享/"  # 👈 点击它，精准直达你的见证音频分类大厅
+        weight: 4
+        url: "/categories/jianzheng/"   # 👈 核心：这里的链接改成拼音 jianzheng
         params:
-            icon: book              # 👈 同样配上漂亮的 📖 书本图标
+            icon: book
 ---
