@@ -1,7 +1,6 @@
 ---
 title: "张伯笠牧师 - 生命见证全集 🎙️"
 date: 2026-05-26
-# 注意看：这里不需要 hidden 参数，也不需要 categories，极其干净！
 ---
 
 ### 🎙️ 欢迎点播收听张伯笠牧师的生命见证：
@@ -27,6 +26,12 @@ const ap = new APlayer({
             name: '生命见证（一）- 从狂人到牧者',
             artist: '张伯笠牧师',
             url: 'https://audio.wyxwym.com/jianzheng/zblmsjz1.mp3',
+            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+        },  /* 👈 核心：第一集大括号结束这里，必须要有一个英文逗号！ */
+        {
+            name: '生命见证（二）- 旷野的呼声',
+            artist: '张伯笠牧师',
+            url: 'https://audio.wyxwym.com/jianzheng/zblmsjz2.mp3', /* 👈 这里是第二集的真实音频链接 */
             cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
         }
     ]
