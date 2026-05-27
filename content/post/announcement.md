@@ -3,7 +3,7 @@ title: "欢迎来到神爱世人资源站 🌟"
 description: "这里是专注于分享历年主日精选讲道录音与属灵信息听道的纯净空间。🌿"
 date: 2026-05-26
 featured: true
-image: "https://audio.wyxwym.com/img/eden.jpg"  # 👈 直接贴带 https 的完整网址
+image: "/img/temple.jpg"  # 👈 核心：最前面必须加一个斜杠 /
 ---
 
 ### 📋 网站使用指南
