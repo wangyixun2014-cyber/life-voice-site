@@ -1,5 +1,5 @@
 ---
-title: "讲道与见证"
+title: "讲道录音"
 slug: "sermons"
 menu:
     main:
