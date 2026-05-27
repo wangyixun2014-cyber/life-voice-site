@@ -1,5 +1,5 @@
 ---
-title: "唐崇荣牧师：登山宝训 (全21集) ⛰️"
+title: "唐崇荣牧师：登山宝训 (全38集) ⛰️"
 date: 2026-05-27
 comments: false
 ---
@@ -58,7 +58,21 @@ const ap_dengshan = new APlayer({
         { name: '登山宝训 21', artist: '唐崇荣牧师', url: base_url + '登山宝训21_1.mp3', cover: default_cover },
         { name: '登山宝训 22', artist: '唐崇荣牧师', url: base_url + '登山宝训22_1.mp3', cover: default_cover },
         { name: '登山宝训 23', artist: '唐崇荣牧师', url: base_url + '登山宝训23_1.mp3', cover: default_cover },
-        { name: '登山宝训 24', artist: '唐崇荣牧师', url: base_url + '登山宝训24_1.mp3', cover: default_cover }
+        { name: '登山宝训 24', artist: '唐崇荣牧师', url: base_url + '登山宝训24_1.mp3', cover: default_cover },
+        { name: '登山宝训 25', artist: '唐崇荣牧师', url: base_url + '登山宝训25_1.mp3', cover: default_cover },
+        { name: '登山宝训 26', artist: '唐崇荣牧师', url: base_url + '登山宝训26_1.mp3', cover: default_cover },
+        { name: '登山宝训 27', artist: '唐崇荣牧师', url: base_url + '登山宝训27_1.mp3', cover: default_cover },
+        { name: '登山宝训 28', artist: '唐崇荣牧师', url: base_url + '登山宝训28_1.mp3', cover: default_cover },
+        { name: '登山宝训 29', artist: '唐崇荣牧师', url: base_url + '登山宝训29_1.mp3', cover: default_cover },
+        { name: '登山宝训 30', artist: '唐崇荣牧师', url: base_url + '登山宝训30_1.mp3', cover: default_cover },
+        { name: '登山宝训 31', artist: '唐崇荣牧师', url: base_url + '登山宝训31_1.mp3', cover: default_cover },
+        { name: '登山宝训 32', artist: '唐崇荣牧师', url: base_url + '登山宝训32_1.mp3', cover: default_cover },
+        { name: '登山宝训 33', artist: '唐崇荣牧师', url: base_url + '登山宝训33_1.mp3', cover: default_cover },
+        { name: '登山宝训 34', artist: '唐崇荣牧师', url: base_url + '登山宝训34_1.mp3', cover: default_cover },
+        { name: '登山宝训 35', artist: '唐崇荣牧师', url: base_url + '登山宝训35_1.mp3', cover: default_cover },
+        { name: '登山宝训 36', artist: '唐崇荣牧师', url: base_url + '登山宝训36_1.mp3', cover: default_cover },
+        { name: '登山宝训 37', artist: '唐崇荣牧师', url: base_url + '登山宝训37_1.mp3', cover: default_cover },
+        { name: '登山宝训 38', artist: '唐崇荣牧师', url: base_url + '登山宝训38_1.mp3', cover: default_cover }
     ]
 });
 </script>
