@@ -4,7 +4,7 @@ slug: "jianzheng"
 menu:
     main:
         weight: 4
-        url: "/categories/jianzheng/"   # 👈 核心：这里的链接改成拼音 jianzheng
+        url: "/categories/见证分享/" 
         params:
             icon: book
 ---
