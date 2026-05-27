@@ -10,11 +10,35 @@ date: 2026-05-26
 <div id="aplayer-zbl"></div>
 
 <style>
-/* 经典平铺大字号样式 */
+/* 1. 原有基础设置：整体卡片、大标题、列表全展开 */
 .aplayer { font-size: 16px !important; margin: 20px 0 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important; }
 .aplayer .aplayer-info .aplayer-music .aplayer-title { font-size: 19px !important; font-weight: bold !important; }
 .aplayer .aplayer-list ol li { font-size: 16px !important; height: 44px !important; line-height: 44px !important; }
 .aplayer .aplayer-list, .aplayer .aplayer-list ol { height: auto !important; max-height: none !important; }
+
+/* === 2. 针对红框区域的精准放大设置 === */
+
+/* 放大讲员名字（例如：- 张伯笠牧师） */
+.aplayer .aplayer-info .aplayer-music .aplayer-author { 
+    font-size: 16px !important; 
+    color: #555 !important; 
+}
+
+/* 放大进度条右侧的时间数字 (00:00 / 59:14) */
+.aplayer .aplayer-info .aplayer-controller .aplayer-time { 
+    font-size: 15px !important; 
+}
+
+/* 放大最右侧的控制图标（音量、循环、菜单按钮）以及它们之间的间距 */
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon { 
+    width: 22px !important; 
+    height: 22px !important; 
+    margin-left: 12px !important; 
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon svg { 
+    width: 22px !important; 
+    height: 22px !important; 
+}
 </style>
 
 <script>
