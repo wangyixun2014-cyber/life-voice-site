@@ -1,5 +1,6 @@
 ---
 title: "今日推荐：我必使你痊愈"
+weight: 2
 description: "这是一篇赞美诗歌的测试音频文章"
 date: 2026-05-26
 image: "/img/temple.jpeg"  # 👈 核心：同样把 jpg 改成准确的 jpeg
