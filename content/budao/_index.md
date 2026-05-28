@@ -1,8 +1,11 @@
 ---
 title: "布道会"
+description: "福音布道、专题信息与信仰入门资源。"
 menu:
     main:
-        weight: 5           # 👈 排序权重：数字越大，在左侧菜单里排得越靠下
+        weight: 5
         params:
-            icon: book       # 👈 左侧菜单的图标，这里用一个麦克风图标 (mic)
+            icon: book
 ---
+
+这里收录福音布道会与专题信息，方便慕道朋友和弟兄姊妹持续收听。

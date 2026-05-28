@@ -1,8 +1,125 @@
 /*
-    You can add your own custom styles here.
+    自定义样式：中文阅读优化 + APlayer 播放器统一排版
 */
 
-/* 全站彻底隐藏日期、日历和时钟图标 */
-.article-meta, .article-time, .article-date, .post-meta {
+/* 全站隐藏日期、日历和时钟图标，让资源站页面更清爽 */
+.article-meta,
+.article-time,
+.article-date,
+.post-meta {
     display: none !important;
+}
+
+/* 中文阅读体验优化 */
+.article-content {
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.article-content h2,
+.article-content h3 {
+    margin-top: 1.5em;
+    margin-bottom: .75em;
+}
+
+.article-content audio {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* 温馨提示卡片 */
+.audio-note {
+    background: linear-gradient(135deg, #f8f9fa 0%, #eef3ff 100%);
+    border-left: 4px solid #5c7cfa;
+    padding: 13px 16px;
+    margin: 16px 0 20px;
+    border-radius: 8px;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* APlayer 统一样式：所有音频页面共用，不再每页重复复制 CSS */
+.aplayer {
+    font-size: 16px !important;
+    margin: 22px 0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08) !important;
+    overflow: hidden !important;
+}
+
+.aplayer .aplayer-list,
+.aplayer .aplayer-list ol {
+    height: auto !important;
+    max-height: none !important;
+}
+
+.aplayer .aplayer-list ol li {
+    font-size: 16px !important;
+    min-height: 44px !important;
+    height: auto !important;
+    line-height: 1.45 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid rgba(0,0,0,.06) !important;
+}
+
+.aplayer .aplayer-info {
+    height: auto !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.aplayer .aplayer-info .aplayer-music {
+    height: auto !important;
+    overflow: visible !important;
+    margin-bottom: 14px !important;
+    padding-bottom: 2px !important;
+}
+
+.aplayer .aplayer-info .aplayer-music .aplayer-title {
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+}
+
+.aplayer .aplayer-info .aplayer-music .aplayer-author {
+    font-size: 16px !important;
+    color: #555 !important;
+    line-height: 1.25 !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time {
+    font-size: 15px !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon {
+    width: 22px !important;
+    height: 22px !important;
+    margin-left: 12px !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.aplayer .aplayer-list {
+    margin-top: 8px !important;
+}
+
+@media (max-width: 768px) {
+    .article-content {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .aplayer .aplayer-info .aplayer-music .aplayer-title {
+        font-size: 17px !important;
+    }
+
+    .aplayer .aplayer-info .aplayer-music .aplayer-author,
+    .aplayer .aplayer-list ol li {
+        font-size: 15px !important;
+    }
 }

@@ -1,5 +1,5 @@
 # Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
+mainSections = ["post", "jiangdao", "jianzheng", "budao"]
 # Output page's full content in RSS.
 rssFullContent = true
 favicon        = "img/szj.jpeg"
@@ -25,11 +25,11 @@ SortBy              = "default"
 [article]
     headingAnchor = false
     math          = false
-    readingTime   = true
+    readingTime   = false
 
     [article.license]
         enabled = true
-        default = "Licensed under CC BY-NC-SA 4.0"
+        default = "本站内容仅供学习与灵修使用，请勿商用传播。"
 
 [widgets]
     homepage = [
@@ -43,7 +43,7 @@ SortBy              = "default"
 
 ## Comments
 [comments]
-    enabled  = true
+    enabled  = false
     provider = "disqus"
 
     # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml

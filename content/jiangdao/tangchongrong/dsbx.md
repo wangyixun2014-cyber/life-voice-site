@@ -1,13 +1,14 @@
 ---
-title: "唐崇荣牧师：登山宝训 (全38集) ⛰️"
+title: "唐崇荣牧师：登山宝训（全38集）⛰️"
+description: "唐崇荣牧师登山宝训系列解经讲道，共38集。"
 date: 2026-05-27
 comments: false
 ---
 
 ### 📖 欢迎聆听《登山宝训》系列解经讲道：
 
-<div style="background-color: #f8f9fa; border-left: 4px solid #5c7cfa; padding: 12px 16px; margin: 15px 0; border-radius: 4px; color: #555; font-size: 15px; line-height: 1.6;">
-    📡 <strong>温馨提示：</strong> 本系列包含 38 集全长高清录音。为避免消耗过多手机数据，建议您在连接 <strong>Wi-Fi（无线网络）</strong> 的环境下进行聆听。
+<div class="audio-note">
+    📡 <strong>温馨提示：</strong> 本系列包含 38 集录音。为避免消耗过多手机数据，建议在连接 <strong>Wi‑Fi</strong> 后收听。
 </div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -15,20 +16,6 @@ comments: false
 
 <div id="aplayer-dengshan"></div>
 
-<style>
-/* === 精心打磨的完美排版 CSS === */
-.aplayer { font-size: 16px !important; margin: 20px 0 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important; }
-.aplayer .aplayer-list ol li { font-size: 16px !important; height: 44px !important; line-height: 44px !important; border-bottom: 1px solid #eee; }
-.aplayer .aplayer-list, .aplayer .aplayer-list ol { height: auto !important; max-height: none !important; }
-.aplayer .aplayer-info { height: auto !important; padding-top: 16px !important; padding-bottom: 16px !important; }
-.aplayer .aplayer-info .aplayer-music { height: auto !important; overflow: visible !important; margin-bottom: 14px !important; padding-bottom: 2px !important; }
-.aplayer .aplayer-info .aplayer-music .aplayer-title { font-size: 19px !important; font-weight: bold !important; line-height: 1.2 !important; }
-.aplayer .aplayer-info .aplayer-music .aplayer-author { font-size: 16px !important; color: #555 !important; line-height: 1.2 !important; }
-.aplayer .aplayer-info .aplayer-controller .aplayer-time { font-size: 15px !important; }
-.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon { width: 22px !important; height: 22px !important; margin-left: 12px !important; }
-.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon svg { width: 22px !important; height: 22px !important; }
-.aplayer .aplayer-list { margin-top: 8px !important; }
-</style>
 
 <script>
 const base_url = 'https://audio.wyxwym.com/jiangdao/tangchongrong/dengshanbaoxun/';
