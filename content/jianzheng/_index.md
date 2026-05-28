@@ -1,5 +1,5 @@
 ---
-title: "见证分享"
+title: "见证"
 description: "生命见证、信仰经历与恩典故事。"
 menu:
     main:
