@@ -1,5 +1,5 @@
 ---
-title: "布道会"
+title: "布道"
 description: "福音布道、专题信息与信仰入门资源。"
 menu:
     main:
