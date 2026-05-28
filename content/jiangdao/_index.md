@@ -1,5 +1,5 @@
 ---
-title: "讲道录音"
+title: "讲道"
 description: "系统讲道、解经系列与主日信息。"
 menu:
     main:
