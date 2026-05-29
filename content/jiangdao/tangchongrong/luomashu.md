@@ -33,7 +33,7 @@ const ap_luomashu = new APlayer({
             name: '罗马书 ' + fileNum,
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/luomashu/luomashu-' + fileNum + '.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/luomashu.png'
         };
     })
 });

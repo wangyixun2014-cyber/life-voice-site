@@ -27,7 +27,7 @@ const yifusuoshuMainAudio = yifusuoshuAudioNumbers.map(function(num) {
         name: '以弗所书 ' + fileNum,
         artist: '唐崇荣牧师',
         url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/yifusuoshu/yifusuoshu-' + fileNum + '.mp3',
-        cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+        cover: '/covers/tangchongrong/yifusuoshu.png'
     };
 });
 
@@ -36,7 +36,7 @@ const yifusuoshuQaAudio = [
         name: '以弗所书 Q&A',
         artist: '唐崇荣牧师',
         url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/yifusuoshu/yifusuoshu-qa.mp3',
-        cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+        cover: '/covers/tangchongrong/yifusuoshu.png'
     }
 ];
 

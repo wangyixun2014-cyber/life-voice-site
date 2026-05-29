@@ -31,7 +31,7 @@ const yageeshuMainAudio = yageeshuMainNumbers.map(function(num) {
         name: '雅各书 ' + fileNum,
         artist: '唐崇荣牧师',
         url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/yageeshu/yageeshu-' + fileNum + '.mp3',
-        cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+        cover: '/covers/tangchongrong/yageeshu.png'
     };
 });
 
@@ -41,7 +41,7 @@ const yageeshuQaAudio = yageeshuQaNumbers.map(function(num) {
         name: '雅各书 Q&A ' + fileNum,
         artist: '唐崇荣牧师',
         url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/yageeshu/yageeshu-qa-' + fileNum + '.mp3',
-        cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+        cover: '/covers/tangchongrong/yageeshu.png'
     };
 });
 

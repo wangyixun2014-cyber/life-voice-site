@@ -28,55 +28,55 @@ const ap_zhuyesushoushitan = new APlayer({
             name: '主耶稣受试探 01',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-01.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 02',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-02.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 03',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-03.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 04',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-04.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 05',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-05.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 06',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-06.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 07',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-07.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 08',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-08.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         },
         {
             name: '主耶稣受试探 09',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/zhuyesushoushitan/zhuyesushoushitan-09.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/zhuyesushoushitan.png'
         }
     ]
 });

@@ -28,49 +28,49 @@ const ap_moxididaogao = new APlayer({
             name: '摩西的祷告 01',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-01.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 02',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-02.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 03',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-03.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 04',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-04.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 05',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-05.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 06',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-06.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 07',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-07.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         },
         {
             name: '摩西的祷告 08',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/moxididaogao/moxididaogao-08.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/moxididaogao.png'
         }
     ]
 });

@@ -23,7 +23,7 @@ comments: false
 
 <script>
 const base_url = 'https://audio.wyxwym.com/jiangdao/tangchongrong/dengshanbaoxun/';
-const default_cover = 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'; 
+const default_cover = '/covers/tangchongrong/dengshanbaoxun.png'; 
 
 // === 播放器初始化与 38 集完整列表 ===
 const ap_dengshan = new APlayer({

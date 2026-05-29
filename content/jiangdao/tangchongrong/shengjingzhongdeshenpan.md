@@ -33,7 +33,7 @@ const ap_shengjingzhongdeshenpan = new APlayer({
             name: '圣经中的审判 ' + fileNum,
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jiangdao/tangchongrong/shengjingzhongdeshenpan/shengjingzhongdeshenpan-' + fileNum + '.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/tangchongrong/shengjingzhongdeshenpan.png'
         };
     })
 });
