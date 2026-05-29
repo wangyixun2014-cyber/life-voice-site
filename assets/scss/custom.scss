@@ -123,3 +123,19 @@
         font-size: 15px !important;
     }
 }
+
+/* 列表页优化：让专辑列表更像资源目录 */
+.article-list .article-title {
+    line-height: 1.35;
+}
+
+.article-list .article-title a {
+    word-break: break-word;
+}
+
+/* 长专辑标题在手机端更好换行 */
+@media (max-width: 768px) {
+    .article-list .article-title {
+        font-size: 1.05rem;
+    }
+}
