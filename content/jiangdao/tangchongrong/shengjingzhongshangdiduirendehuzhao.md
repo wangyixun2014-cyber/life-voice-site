@@ -11,11 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：圣经中上帝对人的呼召 2024
-
-唐崇荣牧师《圣经中上帝对人的呼召》系列讲道音频。  
-请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

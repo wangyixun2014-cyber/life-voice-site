@@ -11,10 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：主耶稣受试探 2023
-
-唐崇荣牧师主耶稣受试探系列讲道音频，共9集。请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

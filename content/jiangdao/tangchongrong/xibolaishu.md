@@ -11,12 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：希伯来书
-
-唐崇荣牧师《希伯来书》系列讲道音频，共128集。  
-本系列缺第7集和第104集，播放列表已自动跳过。  
-请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

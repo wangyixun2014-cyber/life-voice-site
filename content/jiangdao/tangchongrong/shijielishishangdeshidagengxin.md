@@ -11,11 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：世界历史上的十大更新 2023
-
-唐崇荣牧师《世界历史上的十大更新》系列讲道音频。  
-请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

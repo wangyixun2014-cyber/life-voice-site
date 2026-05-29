@@ -11,11 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：摩西的祷告 2025
-
-唐崇荣牧师《摩西的祷告》系列讲道音频，共8集。  
-请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

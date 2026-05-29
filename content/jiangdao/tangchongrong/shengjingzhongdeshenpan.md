@@ -11,11 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：圣经中的各种审判 2021
-
-唐崇荣牧师《圣经中的各种审判 2021》系列讲道音频，共51集。  
-请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

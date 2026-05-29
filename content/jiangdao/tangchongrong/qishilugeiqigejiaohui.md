@@ -11,11 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：《启示录》基督给七间教会的信息
-
-唐崇荣牧师《启示录》基督给七间教会的信息系列讲道音频，共15集。  
-请点击下方列表收听。
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 

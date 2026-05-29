@@ -11,8 +11,6 @@ tags:
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：登山宝训 2020
-
 <div class="audio-note">
     📡 <strong>温馨提示：</strong> 本系列包含 38 集录音。为避免消耗过多手机数据，建议在连接 <strong>Wi‑Fi</strong> 后收听。
 </div>
