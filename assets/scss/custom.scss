@@ -287,24 +287,41 @@
     }
 }
 
-/* 左侧菜单文字放大 */
-.sidebar-menu .menu-item span,
-.sidebar-menu li a span,
-.sidebar-menu a {
+/* 左侧导航菜单文字放大：Hugo Stack 主题 */
+#main-menu li a,
+.menu li a,
+.left-sidebar .menu li a {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+/* 左侧导航菜单文字 */
+#main-menu li a span,
+.menu li a span,
+.left-sidebar .menu li a span {
     font-size: 16px !important;
     font-weight: 600 !important;
 }
 
-/* 左侧菜单图标稍微放大 */
-.sidebar-menu svg,
-.sidebar-menu .icon {
-    width: 18px !important;
-    height: 18px !important;
+/* 左侧图标放大 */
+#main-menu li a svg,
+.menu li a svg,
+.left-sidebar .menu li a svg {
+    width: 19px !important;
+    height: 19px !important;
 }
 
-/* 左侧菜单行高和点击区域加大，手机更好点 */
-.sidebar-menu li a,
-.sidebar-menu .menu-item {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+/* 每个菜单项点击区域加大 */
+#main-menu li,
+.menu li,
+.left-sidebar .menu li {
+    margin-bottom: 8px !important;
+}
+
+#main-menu li a,
+.menu li a,
+.left-sidebar .menu li a {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
 }
