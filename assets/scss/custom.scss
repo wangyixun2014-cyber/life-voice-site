@@ -139,3 +139,11 @@
         font-size: 1.05rem;
     }
 }
+/* 隐藏 APlayer 右侧多余控制按钮：音量、下一首、循环、列表按钮 */
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-volume-down,
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-forward,
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-loop,
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-order,
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-menu {
+    display: none !important;
+}
