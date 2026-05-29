@@ -19,6 +19,8 @@ const ap_tcr_children = new APlayer({
     container: document.getElementById('aplayer-tcr-children'), /* 👈 对应上面的专属 ID */
     listFolded: false,
     preload: 'none',
+    loop: 'none',
+    order: 'list',
     audio: [
         {
             name: '耶稣是谁',
