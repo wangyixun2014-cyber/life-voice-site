@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：约翰福音"
 date: 2026-05-28
+weight: 150
 description: "唐崇荣牧师《约翰福音》系列讲道音频，共146集。"
 categories:
     - 讲道录音

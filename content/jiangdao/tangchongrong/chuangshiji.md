@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：创世记"
 date: 2026-05-28
+weight: 100
 description: "唐崇荣牧师《创世记》系列讲道音频，共45集。"
 categories:
     - 讲道录音

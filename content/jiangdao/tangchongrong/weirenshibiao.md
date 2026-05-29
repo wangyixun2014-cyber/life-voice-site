@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：为人师表"
 date: 2026-05-28
+weight: 999
 description: "唐崇荣牧师《为人师表》系列讲道音频，共7集。"
 categories:
     - 讲道录音

@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：以弗所书"
 date: 2026-05-28
+weight: 140
 description: "唐崇荣牧师《以弗所书》系列讲道音频，共20讲，另含Q&A。"
 categories:
     - 讲道录音

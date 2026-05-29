@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：罗马书"
 date: 2026-05-28
+weight: 110
 description: "唐崇荣牧师《罗马书》系列讲道音频，共93集。"
 categories:
     - 讲道录音

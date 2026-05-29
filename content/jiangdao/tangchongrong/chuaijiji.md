@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：出埃及记"
 date: 2026-05-28
+weight: 160
 description: "唐崇荣牧师《出埃及记》系列讲道音频，共26集。"
 categories:
     - 讲道录音

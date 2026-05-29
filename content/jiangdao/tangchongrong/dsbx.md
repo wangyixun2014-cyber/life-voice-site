@@ -1,11 +1,17 @@
 ---
-title: "唐崇荣牧师：登山宝训（全38集）⛰️"
-description: "唐崇荣牧师登山宝训系列解经讲道，共38集。"
-date: 2026-05-27
+title: "唐崇荣牧师：登山宝训 2020"
+date: 2026-05-28
+weight: 80
+description: "唐崇荣牧师《登山宝训 2020》系列讲道音频，共38集。"
+categories:
+    - 讲道录音
+tags:
+    - 唐崇荣
+    - 登山宝训
 comments: false
 ---
 
-### 📖 欢迎聆听《登山宝训》系列解经讲道：
+### 🎧 唐崇荣牧师：登山宝训 2020
 
 <div class="audio-note">
     📡 <strong>温馨提示：</strong> 本系列包含 38 集录音。为避免消耗过多手机数据，建议在连接 <strong>Wi‑Fi</strong> 后收听。

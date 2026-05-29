@@ -1,18 +1,19 @@
 ---
-title: "唐崇荣牧师：圣经中的审判"
+title: "唐崇荣牧师：圣经中的各种审判 2021"
 date: 2026-05-28
-description: "唐崇荣牧师《圣经中的审判》系列讲道音频，共51集。"
+weight: 70
+description: "唐崇荣牧师《圣经中的各种审判 2021》系列讲道音频，共51集。"
 categories:
     - 讲道录音
 tags:
     - 唐崇荣
-    - 圣经中的审判
+    - 圣经中的各种审判
 comments: false
 ---
 
-### 🎧 唐崇荣牧师：圣经中的审判
+### 🎧 唐崇荣牧师：圣经中的各种审判 2021
 
-唐崇荣牧师《圣经中的审判》系列讲道音频，共51集。  
+唐崇荣牧师《圣经中的各种审判 2021》系列讲道音频，共51集。  
 请点击下方列表收听。
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
