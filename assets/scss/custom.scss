@@ -286,3 +286,25 @@
         line-height: 1.3 !important;
     }
 }
+
+/* 左侧菜单文字放大 */
+.sidebar-menu .menu-item span,
+.sidebar-menu li a span,
+.sidebar-menu a {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+/* 左侧菜单图标稍微放大 */
+.sidebar-menu svg,
+.sidebar-menu .icon {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* 左侧菜单行高和点击区域加大，手机更好点 */
+.sidebar-menu li a,
+.sidebar-menu .menu-item {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
