@@ -71,10 +71,6 @@
             updateButton();
         });
 
-        /*
-            记录用户当前点播的是第几集。
-            这样即使 APlayer 内部想自动跳，我们也知道真正结束的是哪一集。
-        */
         if (player.list && typeof player.list.switch === 'function') {
             const originalSwitch = player.list.switch.bind(player.list);
 
@@ -86,24 +82,6 @@
             };
         }
 
-        /*
-            禁止 APlayer 自己在 ended 后自动 skipForward。
-            后续全部由我们自己的逻辑控制。
-        */
-        if (typeof player.skipForward === 'function') {
-            const originalSkipForward = player.skipForward.bind(player);
-
-            player.skipForward = function () {
-                if (handlingEnded) return;
-                return originalSkipForward();
-            };
-        }
-
-        /*
-            用原生 audio ended 捕获阶段接管结束逻辑。
-            关：停在当前集
-            开：只前进一集，不会跳到 3、5、7
-        */
         player.audio.addEventListener('ended', function (event) {
             event.preventDefault();
             event.stopImmediatePropagation();
