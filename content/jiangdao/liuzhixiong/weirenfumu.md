@@ -37,7 +37,7 @@ const ap_weirenfumu = new APlayer({
             name: '为人父母 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/weirenfumu/weirenfumu-' + fileNum + '.mp3',
-            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/weirenfumu.png'
+            cover: '/covers/liuzhixiong/weirenfumu.png'
         };
     })
 });
