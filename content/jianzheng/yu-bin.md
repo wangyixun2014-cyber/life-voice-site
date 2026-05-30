@@ -26,7 +26,7 @@ const ap_yubin = new APlayer({
             name: '于斌牧师见证（一）',
             artist: '于斌牧师',
             url: 'https://audio.wyxwym.com/jianzheng/ybmsgzjz.mp3', /* 👈 老王，记得把这里换成你服务器上真实的音频链接 */
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/jianzheng/yubin.png'
         }
         /* 如果有第二集，就在这里加英文逗号继续写... */
     ]
