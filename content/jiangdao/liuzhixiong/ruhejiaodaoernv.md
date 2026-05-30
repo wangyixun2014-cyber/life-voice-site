@@ -33,7 +33,7 @@ const ap_ruhejiaodaoernv = new APlayer({
             name: '如何教导儿女',
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/ruhejiaodaoernv/ruhejiaodaoernv-01.mp3',
-            cover: '/covers/liuzhixiong/heshenxinyidejiating.png'
+            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/ruhejiaodaoernv.png'
         }
     ]
 });
