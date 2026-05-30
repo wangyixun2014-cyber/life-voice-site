@@ -24,13 +24,13 @@ const ap_zbl = new APlayer({
             name: '生命见证（一）',
             artist: '张伯笠牧师',
             url: 'https://audio.wyxwym.com/jianzheng/zblmsjz1.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/jianzheng/zhangboli.png'
         },  /* 👈 核心：第一集大括号结束这里，必须要有一个英文逗号！ */
         {
             name: '生命见证（二）',
             artist: '张伯笠牧师',
             url: 'https://audio.wyxwym.com/jianzheng/zblmsjz2.mp3', /* 👈 这里是第二集的真实音频链接 */
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/jianzheng/zhangboli.png'
         }
     ]
 });
