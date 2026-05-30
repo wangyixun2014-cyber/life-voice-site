@@ -71,12 +71,18 @@ function setupAudioContinuousToggle(player, containerId) {
 
     const hint = document.createElement('span');
     hint.className = 'audio-mode-toggle-hint';
-    hint.textContent = '默认播完本集停止，点击可切换连续播放';
+    hint.textContent = '温馨提醒：音频文件较大，建议在 WiFi 环境下收听，避免流量消耗过多。';
+
+    function getCurrentIndex() {
+        try {
+            if (player.list && typeof player.list.index === 'number') return player.list.index;
+        } catch (e) {}
+        return 0;
+    }
 
     function updateButton() {
         btn.textContent = continuousPlay ? '连续播放：开' : '连续播放：关';
         btn.classList.toggle('is-on', continuousPlay);
-        hint.textContent = continuousPlay ? '当前会自动播放下一集' : '当前播完本集会停止';
     }
 
     btn.addEventListener('click', function() {
@@ -85,13 +91,28 @@ function setupAudioContinuousToggle(player, containerId) {
     });
 
     player.on('ended', function() {
-        if (!continuousPlay) return;
+        const endedIndex = getCurrentIndex();
+
         setTimeout(function() {
             try {
-                player.skipForward();
-                player.play();
+                if (continuousPlay) {
+                    const currentIndex = getCurrentIndex();
+                    const total = player.list && player.list.audios ? player.list.audios.length : 0;
+                    if (currentIndex === endedIndex && total > 0 && endedIndex < total - 1 && typeof player.skipForward === 'function') {
+                        player.skipForward();
+                    }
+                    player.play();
+                } else {
+                    player.pause();
+                    if (player.list && typeof player.list.switch === 'function') {
+                        player.list.switch(endedIndex);
+                    }
+                    if (player.audio) {
+                        player.audio.currentTime = 0;
+                    }
+                }
             } catch (e) {}
-        }, 300);
+        }, 180);
     });
 
     wrap.appendChild(btn);
