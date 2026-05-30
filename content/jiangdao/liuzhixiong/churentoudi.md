@@ -37,7 +37,7 @@ const ap_churentoudi = new APlayer({
             name: '出人头地 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/churentoudi/churentoudi-' + fileNum + '.mp3',
-            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/churentoudi.png'
+            cover: '/covers/liuzhixiong/churentoudi.png'
         };
     })
 });
