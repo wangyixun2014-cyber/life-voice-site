@@ -25,14 +25,12 @@
         container.parentNode.insertBefore(wrap, container);
 
         let continuousPlay = false;
+        let handlingEnded = false;
 
         const player = new APlayer({
             container: container,
             listFolded: false,
             preload: 'none',
-
-            // 注意：APlayer 的 loop:none 仍然会在列表中继续下一首，
-            // 所以下面会用原生 ended 捕获来接管播放逻辑。
             loop: 'none',
             order: 'list',
             audio: config.audio
@@ -56,6 +54,22 @@
             return config.audio.length;
         }
 
+        function switchTo(index) {
+            try {
+                if (player.list && typeof player.list.switch === 'function') {
+                    player.list.switch(index);
+                }
+            } catch (e) {}
+        }
+
+        function resetAudioTime() {
+            try {
+                if (player.audio) {
+                    player.audio.currentTime = 0;
+                }
+            } catch (e) {}
+        }
+
         function updateButton() {
             btn.textContent = continuousPlay ? '连续播放：开' : '连续播放：关';
             btn.classList.toggle('is-on', continuousPlay);
@@ -66,45 +80,42 @@
             updateButton();
         });
 
-        /*
-            核心修复：
-            不用 player.on('ended')，因为 APlayer 自己也会处理 ended。
-            这里用原生 audio 的捕获阶段拦截 ended，
-            阻止 APlayer 自动跳下一首，然后由我们自己决定是否下一首。
-        */
-        player.audio.addEventListener('ended', function (event) {
-            event.preventDefault();
-            event.stopImmediatePropagation();
+        player.on('ended', function () {
+            if (handlingEnded) return;
+            handlingEnded = true;
 
-            const currentIndex = getCurrentIndex();
+            const endedIndex = getCurrentIndex();
             const total = getTotal();
 
-            if (continuousPlay) {
-                if (currentIndex < total - 1) {
-                    player.skipForward();
+            setTimeout(function () {
+                try {
+                    if (continuousPlay) {
+                        const nextIndex = endedIndex + 1;
 
-                    setTimeout(function () {
-                        player.play();
-                    }, 200);
-                } else {
-                    player.pause();
+                        if (nextIndex < total) {
+                            switchTo(nextIndex);
+                            resetAudioTime();
 
-                    if (player.audio) {
-                        player.audio.currentTime = 0;
+                            setTimeout(function () {
+                                player.play();
+                            }, 120);
+                        } else {
+                            player.pause();
+                            switchTo(endedIndex);
+                            resetAudioTime();
+                        }
+                    } else {
+                        player.pause();
+                        switchTo(endedIndex);
+                        resetAudioTime();
                     }
-                }
-            } else {
-                player.pause();
+                } catch (e) {}
 
-                if (player.audio) {
-                    player.audio.currentTime = 0;
-                }
-
-                if (player.list && typeof player.list.switch === 'function') {
-                    player.list.switch(currentIndex);
-                }
-            }
-        }, true);
+                setTimeout(function () {
+                    handlingEnded = false;
+                }, 500);
+            }, 300);
+        });
 
         updateButton();
 
