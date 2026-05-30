@@ -37,7 +37,7 @@ const ap_youxiushixunlianchulaide = new APlayer({
             name: '优秀是训练出来的 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/youxiushixunlianchulaide/youxiushixunlianchulaide-' + fileNum + '.mp3',
-            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/youxiushixunlianchulaide.png'
+            cover: '/covers/liuzhixiong/youxiushixunlianchulaide.png'
         };
     })
 });
