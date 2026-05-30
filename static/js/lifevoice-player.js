@@ -54,27 +54,24 @@
 
         player.on('ended', function () {
             const endedIndex = getCurrentIndex();
-
+        
             setTimeout(function () {
                 try {
                     if (continuousPlay) {
-                        const currentIndex = getCurrentIndex();
-                        const total = player.list && player.list.audios ? player.list.audios.length : 0;
-                        if (currentIndex === endedIndex && total > 0 && endedIndex < total - 1 && typeof player.skipForward === 'function') {
-                            player.skipForward();
-                        }
                         player.play();
                     } else {
                         player.pause();
+        
                         if (player.list && typeof player.list.switch === 'function') {
                             player.list.switch(endedIndex);
                         }
+        
                         if (player.audio) {
                             player.audio.currentTime = 0;
                         }
                     }
                 } catch (e) {}
-            }, 180);
+            }, 300);
         });
 
         updateButton();
