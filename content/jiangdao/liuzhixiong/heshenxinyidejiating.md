@@ -32,7 +32,7 @@ const ap_heshenxinyidejiating = new APlayer({
             name: '合神心意的家庭 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/heshenxinyidejiating/heshenxinyidejiating-' + fileNum + '.mp3',
-            cover: '/covers/liuzhixiong/heshenxinyidejiating.png'
+            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/heshenxinyidejiating.png'
         };
     })
 });
