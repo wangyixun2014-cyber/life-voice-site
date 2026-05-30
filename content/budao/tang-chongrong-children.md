@@ -26,7 +26,7 @@ const ap_tcr_children = new APlayer({
             name: '耶稣是谁',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/budao/tcrms-yssw-etbdh.mp3', /* 👈 老王，记得替换为你真实的音频链接 */
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/budao/yesushishui.png'
         }
         
         /* 如果有第三集、第四集，就在这里加英文逗号继续写... */
