@@ -33,7 +33,7 @@ const ap_qianshouyishiqing = new APlayer({
             name: '牵手一世情',
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/qianshouyishiqing/qianshouyishiqing-01.mp3',
-            cover: '/covers/liuzhixiong/heshenxinyidejiating.png'
+            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/qianshouyishiqing.png'
         }
     ]
 });
