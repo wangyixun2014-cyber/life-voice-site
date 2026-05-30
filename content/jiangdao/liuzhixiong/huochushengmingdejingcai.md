@@ -37,7 +37,7 @@ const ap_huochushengmingdejingcai = new APlayer({
             name: '活出生命的精彩 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/huochushengmingdejingcai/huochushengmingdejingcai-' + fileNum + '.mp3',
-            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/huochushengmingdejingcai.png'
+           cover: '/covers/liuzhixiong/huochushengmingdejingcai.png'
         };
     })
 });
