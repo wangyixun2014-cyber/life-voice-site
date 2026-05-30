@@ -26,7 +26,7 @@
 
         let continuousPlay = false;
         let currentIndex = 0;
-        let handlingEnded = false;
+        let endingHandled = false;
 
         const player = new APlayer({
             container: container,
@@ -71,55 +71,81 @@
             updateButton();
         });
 
+        /*
+            记录用户点击的是第几集。
+            这样我们不用依赖 APlayer 自己的 index。
+        */
         if (player.list && typeof player.list.switch === 'function') {
             const originalSwitch = player.list.switch.bind(player.list);
 
             player.list.switch = function (index) {
                 if (typeof index === 'number') {
                     currentIndex = index;
+                    endingHandled = false;
                 }
+
                 return originalSwitch(index);
             };
         }
 
-        player.audio.addEventListener('ended', function (event) {
-            event.preventDefault();
-            event.stopImmediatePropagation();
+        /*
+            核心修复：
+            不用 ended 控制，因为 ended 容易和 APlayer 自带下一首逻辑冲突。
+            改成 timeupdate，在音频快结束前接管。
+        */
+        player.audio.addEventListener('timeupdate', function () {
+            try {
+                if (!player.audio || !player.audio.duration) return;
 
-            if (handlingEnded) return;
-            handlingEnded = true;
+                const duration = player.audio.duration;
+                const currentTime = player.audio.currentTime;
+                const remaining = duration - currentTime;
 
-            const endedIndex = currentIndex;
-            const total = getTotal();
+                if (remaining > 0.8) return;
+                if (endingHandled) return;
 
-            setTimeout(function () {
-                try {
-                    if (continuousPlay) {
-                        const nextIndex = endedIndex + 1;
+                endingHandled = true;
 
-                        if (nextIndex < total) {
+                const endedIndex = currentIndex;
+                const total = getTotal();
+
+                if (continuousPlay) {
+                    const nextIndex = endedIndex + 1;
+
+                    if (nextIndex < total) {
+                        player.pause();
+
+                        setTimeout(function () {
                             switchTo(nextIndex);
                             resetAudioTime();
 
                             setTimeout(function () {
+                                endingHandled = false;
                                 player.play();
                             }, 200);
-                        } else {
-                            player.pause();
-                            switchTo(endedIndex);
-                            resetAudioTime();
-                        }
+                        }, 100);
                     } else {
                         player.pause();
                         switchTo(endedIndex);
                         resetAudioTime();
+                        endingHandled = false;
                     }
-                } catch (e) {}
+                } else {
+                    player.pause();
+                    switchTo(endedIndex);
+                    resetAudioTime();
+                    endingHandled = false;
+                }
+            } catch (e) {}
+        });
 
-                setTimeout(function () {
-                    handlingEnded = false;
-                }, 800);
-            }, 120);
+        /*
+            防止真正 ended 时 APlayer 又补跳一次。
+        */
+        player.audio.addEventListener('ended', function (event) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            player.pause();
         }, true);
 
         updateButton();
