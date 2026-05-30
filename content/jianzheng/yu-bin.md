@@ -9,7 +9,7 @@ comments: false      # 👈 保持清爽，关闭报错的评论框
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js"></script>
+<script src="/js/lifevoice-player.js?v=6"></script>
 
 <!-- 给于斌牧师专属的播放器 ID -->
 <div id="aplayer-yubin"></div>

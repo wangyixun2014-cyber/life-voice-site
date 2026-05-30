@@ -13,7 +13,7 @@ comments: false
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js"></script>
+<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-yifusuoshu"></div>
 
