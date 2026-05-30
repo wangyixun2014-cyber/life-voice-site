@@ -33,13 +33,13 @@ const ap_yongwoyisheng = new APlayer({
             name: '用我一生 01',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jianzheng/tangchongrong/yongwoyisheng/yongwoyisheng-01.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/jianzheng/yongwoyisheng.png'
         },
         {
             name: '用我一生 02',
             artist: '唐崇荣牧师',
             url: 'https://audio.wyxwym.com/jianzheng/tangchongrong/yongwoyisheng/yongwoyisheng-02.mp3',
-            cover: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300'
+            cover: '/covers/jianzheng/yongwoyisheng.png'
         }
     ]
 });
