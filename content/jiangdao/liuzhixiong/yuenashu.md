@@ -37,7 +37,7 @@ const ap_yuenashu = new APlayer({
             name: '约拿书 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/yuenashu/yuenashu-' + fileNum + '.mp3',
-            cover: '/covers/liuzhixiong/heshenxinyidejiating.png'
+            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/yuenashu.png'
         };
     })
 });
