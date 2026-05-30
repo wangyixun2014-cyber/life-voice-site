@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：用我一生"
 date: 2026-05-28
+player: true
 description: "唐崇荣牧师个人见证《用我一生》音频，共2集。"
 categories:
     - 见证分享
@@ -10,15 +11,11 @@ tags:
     - 用我一生
 comments: false
 ---
-
 ### 🎧 唐崇荣牧师：用我一生
 
 唐崇荣牧师个人见证《用我一生》音频，共2集。  
 请点击下方列表收听。
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-yongwoyisheng"></div>
 

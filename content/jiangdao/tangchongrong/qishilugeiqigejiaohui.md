@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：《启示录》基督给七间教会的信息"
 date: 2026-05-28
+player: true
 weight: 50
 description: "唐崇荣牧师《启示录》基督给七间教会的信息系列讲道音频，共15集。"
 categories:
@@ -10,10 +11,6 @@ tags:
     - 《启示录》基督给七间教会的信息
 comments: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-qishilugeiqigejiaohui"></div>
 

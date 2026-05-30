@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：希伯来书"
 date: 2026-05-28
+player: true
 weight: 120
 description: "唐崇荣牧师《希伯来书》系列讲道音频，共128集，缺第7集和第104集。"
 categories:
@@ -10,10 +11,6 @@ tags:
     - 希伯来书
 comments: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-xibolaishu"></div>
 

@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：以弗所书"
 date: 2026-05-28
+player: true
 weight: 140
 description: "唐崇荣牧师《以弗所书》系列讲道音频，共20讲，另含Q&A。"
 categories:
@@ -10,10 +11,6 @@ tags:
     - 以弗所书
 comments: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-yifusuoshu"></div>
 

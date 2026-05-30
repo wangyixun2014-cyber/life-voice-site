@@ -1,6 +1,7 @@
 ---
 title: "刘志雄长老：牵手一世情"
 date: 2026-05-30
+player: true
 description: "刘志雄长老《牵手一世情》讲道音频，共1集。"
 categories:
     - 讲道录音
@@ -10,10 +11,6 @@ tags:
 weight: 80
 comments: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-qianshouyishiqing"></div>
 

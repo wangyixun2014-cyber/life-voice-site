@@ -2,14 +2,11 @@
 title: "张伯笠牧师：生命见证全集 🎙️"
 description: "张伯笠牧师生命见证音频，共2集。"
 date: 2026-05-26
+player: true
 comments: false      # 👈 核心：加上这一行，强制关闭这个页面的评论框！
 ---
-
 ### 🎙️ 欢迎点播收听张伯笠牧师的生命见证：
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 <div id="aplayer-zbl"></div>
 
 

@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：圣经中上帝对人的呼召 2024"
 date: 2026-05-28
+player: true
 weight: 30
 description: "唐崇荣牧师《圣经中上帝对人的呼召 2024》系列讲道音频。"
 categories:
@@ -10,10 +11,6 @@ tags:
     - 圣经中上帝对人的呼召
 comments: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-shengjingzhongshangdiduirendehuzhao"></div>
 

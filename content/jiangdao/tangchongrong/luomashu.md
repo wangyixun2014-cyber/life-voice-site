@@ -1,6 +1,7 @@
 ---
 title: "唐崇荣牧师：罗马书"
 date: 2026-05-28
+player: true
 weight: 110
 description: "唐崇荣牧师《罗马书》系列讲道音频，共93集。"
 categories:
@@ -10,10 +11,6 @@ tags:
     - 罗马书
 comments: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="/js/lifevoice-player.js?v=6"></script>
 
 <div id="aplayer-luomashu"></div>
 
