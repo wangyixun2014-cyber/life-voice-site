@@ -141,43 +141,55 @@
 }
 
 
-/* APlayer 自定义连续播放按钮：默认不连续，用户可手动开启 */
-.audio-mode-toggle-wrap {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8px;
-    margin: 6px 0 8px 0;
+/* APlayer 自定义连续播放按钮：大按钮 + 一行显示 + 兼容新旧 class */
+.audio-mode-toggle-wrap,
+.continuous-toggle-wrap {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    margin: 8px 0 10px 0 !important;
 }
 
-.audio-mode-toggle-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 132px;
-    height: 34px;
-    padding: 0 14px;
-    border: 0;
-    border-radius: 999px;
-    background: #e5e7eb;
-    color: #111827;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+.audio-mode-toggle-btn,
+.continuous-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    min-width: 150px !important;
+    height: 42px !important;
+    padding: 0 18px !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: #e5e7eb !important;
+    color: #111827 !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    cursor: pointer !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .10) !important;
+    white-space: nowrap !important;
 }
 
-.audio-mode-toggle-btn.is-on {
-    background: #dbeafe;
-    color: #1d4ed8;
+.audio-mode-toggle-btn.is-on,
+.continuous-toggle-btn.is-on {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
 }
 
-.audio-mode-toggle-hint {
-    font-size: 13px;
-    color: #6b7280;
+.audio-mode-toggle-hint,
+.continuous-toggle-tip {
+    display: inline-block !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    color: #6b7280 !important;
 }
 
-/* 原生 APlayer 小图标保留基础播放，不再依赖它们切换连续播放 */
+/* 原生 APlayer 小图标隐藏：保留基础播放和列表按钮 */
 .aplayer .aplayer-icon-volume-down,
 .aplayer .aplayer-icon-forward,
 .aplayer .aplayer-icon-loop,
@@ -203,22 +215,32 @@
     height: 18px !important;
 }
 
+/* 手机端：按钮仍然明显，提醒尽量保持同一行，空间不够时自然压缩 */
 @media (max-width: 768px) {
-    .audio-mode-toggle-wrap {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin: 12px 0 10px 0;
+    .audio-mode-toggle-wrap,
+    .continuous-toggle-wrap {
+        justify-content: flex-start !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        margin: 10px 0 10px 0 !important;
     }
 
-    .audio-mode-toggle-btn {
-        width: 100%;
-        height: 46px;
-        font-size: 15px;
+    .audio-mode-toggle-btn,
+    .continuous-toggle-btn {
+        width: auto !important;
+        min-width: 122px !important;
+        height: 42px !important;
+        padding: 0 12px !important;
+        font-size: 14px !important;
     }
 
-    .audio-mode-toggle-hint {
-        width: 100%;
-        font-size: 12px;
+    .audio-mode-toggle-hint,
+    .continuous-toggle-tip {
+        width: auto !important;
+        flex: 1 1 auto !important;
+        font-size: 12px !important;
+        line-height: 1.3 !important;
     }
 }
 
