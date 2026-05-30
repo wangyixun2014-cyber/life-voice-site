@@ -37,7 +37,7 @@ const ap_heshenxinyidehunyin = new APlayer({
             name: '合神心意的婚姻 ' + fileNum,
             artist: '刘志雄长老',
             url: 'https://audio.wyxwym.com/jiangdao/liuzhixiong/heshenxinyidehunyin/heshenxinyidehunyin-' + fileNum + '.mp3',
-            cover: 'https://audio.wyxwym.com/covers/liuzhixiong/heshenxinyidehunyin.png'
+            cover: '/covers/liuzhixiong/heshenxinyidehunyin.png'
         };
     })
 });
