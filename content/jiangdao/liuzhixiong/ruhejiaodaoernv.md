@@ -13,21 +13,13 @@ comments: false
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-
-<div class="continuous-toggle-wrap">
-    <button class="continuous-toggle-btn" data-target="aplayer-ruhejiaodaoernv">连续播放：关</button>
-    <span class="continuous-toggle-tip">温馨提醒：音频文件较大，建议在 WiFi 环境下收听，避免流量消耗过多。</span>
-</div>
+<script src="/js/lifevoice-player.js"></script>
 
 <div id="aplayer-ruhejiaodaoernv"></div>
 
 <script>
-const ap_ruhejiaodaoernv = new APlayer({
-    container: document.getElementById('aplayer-ruhejiaodaoernv'),
-    listFolded: false,
-    preload: 'none',
-    loop: 'none',
-    order: 'list',
+createLifeVoicePlayer({
+    id: 'aplayer-ruhejiaodaoernv',
     audio: [
         {
             name: '如何教导儿女',
@@ -36,9 +28,5 @@ const ap_ruhejiaodaoernv = new APlayer({
             cover: '/covers/liuzhixiong/ruhejiaodaoernv.png'
         }
     ]
-});
-
-document.querySelector('[data-target="aplayer-ruhejiaodaoernv"]').addEventListener('click', function() {
-    this.textContent = this.textContent.includes('关') ? '连续播放：开' : '连续播放：关';
 });
 </script>

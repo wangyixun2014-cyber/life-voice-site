@@ -17,21 +17,17 @@ comments: false
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/lifevoice-player.js"></script>
 
 <div id="aplayer-dengshan"></div>
-
 
 <script>
 const base_url = 'https://audio.wyxwym.com/jiangdao/tangchongrong/dengshanbaoxun/';
 const default_cover = '/covers/tangchongrong/dengshanbaoxun.png'; 
 
 // === 播放器初始化与 38 集完整列表 ===
-const ap_dengshan = new APlayer({
-    container: document.getElementById('aplayer-dengshan'),
-    listFolded: false,
-    preload: 'none',
-    loop: 'none',
-    order: 'list',   // 👈 核心省流设置：没点播放前，绝对不提前下载消耗流量
+createLifeVoicePlayer({
+    id: 'aplayer-dengshan',
     audio: [
         { name: '登山宝训 01', artist: '唐崇荣牧师', url: base_url + '登山宝训01_1.mp3', cover: default_cover },
         { name: '登山宝训 02', artist: '唐崇荣牧师', url: base_url + '登山宝训02_1.mp3', cover: default_cover },
@@ -73,82 +69,4 @@ const ap_dengshan = new APlayer({
         { name: '登山宝训 38', artist: '唐崇荣牧师', url: base_url + '登山宝训38_1.mp3', cover: default_cover }
     ]
 });
-
-// === 核心功能：播完即停，禁止自动连播下一集（防挂机神技） ===
-ap_dengshan.on('ended', function () {
-    // 当一集完全播放结束时，系统会自动把列表切到下一集准备好。
-    // 我们利用 0.1 秒的极短延迟，在它刚切过去准备发声的瞬间，强制按下暂停键！
-    setTimeout(function() {
-        ap_dengshan.pause();
-    }, 100);
-});
-
-function setupAudioContinuousToggle(player, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container || !player || container.dataset.toggleReady === '1') return;
-    container.dataset.toggleReady = '1';
-
-    let continuousPlay = false;
-
-    const wrap = document.createElement('div');
-    wrap.className = 'audio-mode-toggle-wrap';
-
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'audio-mode-toggle-btn';
-    btn.textContent = '连续播放：关';
-
-    const hint = document.createElement('span');
-    hint.className = 'audio-mode-toggle-hint';
-    hint.textContent = '温馨提醒：音频文件较大，建议在 WiFi 环境下收听，避免流量消耗过多。';
-
-    function getCurrentIndex() {
-        try {
-            if (player.list && typeof player.list.index === 'number') return player.list.index;
-        } catch (e) {}
-        return 0;
-    }
-
-    function updateButton() {
-        btn.textContent = continuousPlay ? '连续播放：开' : '连续播放：关';
-        btn.classList.toggle('is-on', continuousPlay);
-    }
-
-    btn.addEventListener('click', function() {
-        continuousPlay = !continuousPlay;
-        updateButton();
-    });
-
-    player.on('ended', function() {
-        const endedIndex = getCurrentIndex();
-
-        setTimeout(function() {
-            try {
-                if (continuousPlay) {
-                    const currentIndex = getCurrentIndex();
-                    const total = player.list && player.list.audios ? player.list.audios.length : 0;
-                    if (currentIndex === endedIndex && total > 0 && endedIndex < total - 1 && typeof player.skipForward === 'function') {
-                        player.skipForward();
-                    }
-                    player.play();
-                } else {
-                    player.pause();
-                    if (player.list && typeof player.list.switch === 'function') {
-                        player.list.switch(endedIndex);
-                    }
-                    if (player.audio) {
-                        player.audio.currentTime = 0;
-                    }
-                }
-            } catch (e) {}
-        }, 180);
-    });
-
-    wrap.appendChild(btn);
-    wrap.appendChild(hint);
-    container.parentNode.insertBefore(wrap, container);
-    updateButton();
-}
-
-setupAudioContinuousToggle(ap_dengshan, 'aplayer-dengshan');
 </script>
