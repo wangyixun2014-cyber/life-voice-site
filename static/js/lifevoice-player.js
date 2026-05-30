@@ -25,6 +25,7 @@
         container.parentNode.insertBefore(wrap, container);
 
         let continuousPlay = false;
+        let currentIndex = 0;
         let handlingEnded = false;
 
         const player = new APlayer({
@@ -36,25 +37,15 @@
             audio: config.audio
         });
 
-        function getCurrentIndex() {
-            try {
-                if (player.list && typeof player.list.index === 'number') {
-                    return player.list.index;
-                }
-            } catch (e) {}
-            return 0;
-        }
-
         function getTotal() {
-            try {
-                if (player.list && Array.isArray(player.list.audios)) {
-                    return player.list.audios.length;
-                }
-            } catch (e) {}
             return config.audio.length;
         }
 
         function switchTo(index) {
+            if (index < 0 || index >= getTotal()) return;
+
+            currentIndex = index;
+
             try {
                 if (player.list && typeof player.list.switch === 'function') {
                     player.list.switch(index);
@@ -80,11 +71,47 @@
             updateButton();
         });
 
-        player.on('ended', function () {
+        /*
+            记录用户当前点播的是第几集。
+            这样即使 APlayer 内部想自动跳，我们也知道真正结束的是哪一集。
+        */
+        if (player.list && typeof player.list.switch === 'function') {
+            const originalSwitch = player.list.switch.bind(player.list);
+
+            player.list.switch = function (index) {
+                if (typeof index === 'number') {
+                    currentIndex = index;
+                }
+                return originalSwitch(index);
+            };
+        }
+
+        /*
+            禁止 APlayer 自己在 ended 后自动 skipForward。
+            后续全部由我们自己的逻辑控制。
+        */
+        if (typeof player.skipForward === 'function') {
+            const originalSkipForward = player.skipForward.bind(player);
+
+            player.skipForward = function () {
+                if (handlingEnded) return;
+                return originalSkipForward();
+            };
+        }
+
+        /*
+            用原生 audio ended 捕获阶段接管结束逻辑。
+            关：停在当前集
+            开：只前进一集，不会跳到 3、5、7
+        */
+        player.audio.addEventListener('ended', function (event) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
             if (handlingEnded) return;
             handlingEnded = true;
 
-            const endedIndex = getCurrentIndex();
+            const endedIndex = currentIndex;
             const total = getTotal();
 
             setTimeout(function () {
@@ -98,7 +125,7 @@
 
                             setTimeout(function () {
                                 player.play();
-                            }, 120);
+                            }, 200);
                         } else {
                             player.pause();
                             switchTo(endedIndex);
@@ -113,9 +140,9 @@
 
                 setTimeout(function () {
                     handlingEnded = false;
-                }, 500);
-            }, 300);
-        });
+                }, 800);
+            }, 120);
+        }, true);
 
         updateButton();
 
